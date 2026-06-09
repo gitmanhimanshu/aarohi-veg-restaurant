@@ -43,7 +43,7 @@ export function Menu() {
   }, [filtered]);
 
   return (
-    <section id="menu" className="section bg-cream">
+    <section id="menu" className="section surface-light">
       <div className="container-px">
         <SectionHeading
           kicker="The Full Menu"

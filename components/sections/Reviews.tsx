@@ -27,7 +27,7 @@ export function Reviews() {
   const visible = list.slice(safePage * perPage, safePage * perPage + perPage);
 
   return (
-    <section id="reviews" className="section bg-cream">
+    <section id="reviews" className="section surface-light">
       <div className="container-px">
         <SectionHeading
           kicker="Guest Reviews"

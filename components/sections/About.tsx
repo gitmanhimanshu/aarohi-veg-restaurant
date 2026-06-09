@@ -8,7 +8,7 @@ import { about, gallery, restaurant } from '@/lib/data';
 
 export function About() {
   return (
-    <section id="about" className="section relative overflow-hidden bg-cream">
+    <section id="about" className="section relative overflow-hidden surface-light">
       {/* decorative */}
       <div className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-gold/5 blur-3xl" />
       <div className="container-px grid grid-cols-1 items-center gap-14 lg:grid-cols-2">

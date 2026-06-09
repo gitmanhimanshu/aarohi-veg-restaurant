@@ -7,7 +7,7 @@ import { restaurant } from '@/lib/data';
 
 export function ReviewCTA() {
   return (
-    <section className="bg-cream py-12">
+    <section className="surface-light py-12">
       <div className="container-px">
         <Reveal>
           <div className="relative overflow-hidden rounded-[2rem] bg-gold-sheen px-6 py-12 text-center text-forest-700 shadow-gold md:px-12 md:py-16">

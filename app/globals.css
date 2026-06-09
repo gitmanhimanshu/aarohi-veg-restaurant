@@ -18,7 +18,16 @@
   }
 
   body {
-    @apply bg-cream text-forest-700 antialiased;
+    @apply text-forest-700 antialiased;
+    /* Warm, softly-lit ambient backdrop — gentle gold & orange light pools
+       over a cream base, so the page feels premium instead of flat. */
+    background-color: #FBF6EC;
+    background-image:
+      radial-gradient(1100px 620px at 88% -8%, rgba(242, 104, 46, 0.13), transparent 60%),
+      radial-gradient(1000px 560px at -6% 3%, rgba(200, 160, 75, 0.16), transparent 55%),
+      radial-gradient(950px 720px at 50% 112%, rgba(190, 58, 43, 0.09), transparent 60%),
+      linear-gradient(180deg, #FFFDF9 0%, #FBF5EA 45%, #F7EFE0 100%);
+    background-attachment: fixed;
     font-feature-settings: 'ss01', 'cv11';
     -webkit-font-smoothing: antialiased;
   }
@@ -89,6 +98,20 @@
 
   .card-luxe {
     @apply rounded-3xl border border-forest/10 bg-cream-100 shadow-card;
+  }
+
+  /* Light section surfaces that let the warm ambient backdrop glow through.
+     `surface-light` is near-transparent; `surface-tint` adds a soft warm
+     wash for gentle section-to-section alternation. */
+  .surface-light {
+    background: transparent;
+  }
+
+  .surface-tint {
+    background-image:
+      radial-gradient(820px 420px at 50% -12%, rgba(242, 104, 46, 0.08), transparent 55%),
+      radial-gradient(700px 460px at 100% 60%, rgba(200, 160, 75, 0.10), transparent 55%),
+      linear-gradient(180deg, rgba(246, 238, 222, 0.72) 0%, rgba(244, 234, 214, 0.5) 100%);
   }
 
   .glass {

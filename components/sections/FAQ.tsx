@@ -12,7 +12,7 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="section bg-cream-200/60">
+    <section id="faq" className="section surface-tint">
       <div className="container-px">
         <SectionHeading
           kicker="Good to Know"

@@ -42,7 +42,7 @@ const channels = [
 
 export function OrderOnline() {
   return (
-    <section id="order" className="section bg-cream">
+    <section id="order" className="section surface-light">
       <div className="container-px">
         <SectionHeading
           kicker="Order Online"

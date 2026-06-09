@@ -43,7 +43,7 @@ export function Gallery() {
   }, [index, close, next, prev]);
 
   return (
-    <section id="gallery" className="section bg-cream-200/60">
+    <section id="gallery" className="section surface-tint">
       <div className="container-px">
         <SectionHeading
           kicker="Food Gallery"

@@ -27,7 +27,7 @@ export function Location() {
   };
 
   return (
-    <section id="location" className="section bg-cream-200/60">
+    <section id="location" className="section surface-tint">
       <div className="container-px">
         <SectionHeading
           kicker="Find Us"

@@ -38,7 +38,7 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="section bg-cream">
+    <section id="contact" className="section surface-light">
       <div className="container-px">
         <SectionHeading
           kicker="Contact Us"

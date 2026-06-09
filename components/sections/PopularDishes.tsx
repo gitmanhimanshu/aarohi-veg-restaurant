@@ -19,7 +19,7 @@ export function PopularDishes() {
   const [active, setActive] = useState<Dish | null>(null);
 
   return (
-    <section id="dishes" className="section bg-cream-200/60">
+    <section id="dishes" className="section surface-tint">
       <div className="container-px">
         <SectionHeading
           kicker="Signature Plates"
