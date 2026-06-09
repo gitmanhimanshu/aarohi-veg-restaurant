@@ -2,9 +2,12 @@
   command = "npm run build"
   publish = ".next"
 
+# NOTE: do NOT set NODE_ENV=production here — it makes `npm install` skip
+# devDependencies (tailwindcss, postcss, etc.), breaking the build. Netlify
+# already builds in production mode correctly on its own.
 [build.environment]
-  NODE_ENV = "production"
   NEXT_TELEMETRY_DISABLED = "1"
+  NPM_FLAGS = "--include=dev"
 
 # Official Netlify adapter for Next.js (App Router, SSR, image optimization,
 # OG image generation). Auto-installed by Netlify during cloud builds.
