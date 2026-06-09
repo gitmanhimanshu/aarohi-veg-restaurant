@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_ENV = "production"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+# Official Netlify adapter for Next.js (App Router, SSR, image optimization,
+# OG image generation). Auto-installed by Netlify during cloud builds.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

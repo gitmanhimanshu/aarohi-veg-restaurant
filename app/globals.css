@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-playfair: 'Playfair Display';
+    --font-inter: 'Inter';
+  }
+
+  * {
+    @apply border-forest/10;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-cream text-forest-700 antialiased;
+    font-feature-settings: 'ss01', 'cv11';
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    @apply bg-gold/30 text-forest;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-cream-200;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-forest/30;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-forest/50;
+  }
+}
+
+@layer components {
+  .container-px {
+    @apply mx-auto w-full max-w-7xl px-5 lg:px-8;
+  }
+
+  .section {
+    @apply py-20 md:py-28;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-gold-600;
+  }
+
+  .heading-serif {
+    @apply font-serif font-semibold leading-[1.08] tracking-tight text-forest;
+  }
+
+  .gold-text {
+    @apply bg-gold-sheen bg-clip-text text-transparent;
+  }
+
+  .gold-rule {
+    @apply h-px w-16 bg-gradient-to-r from-transparent via-gold to-transparent;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-cream disabled:pointer-events-none disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply btn bg-forest text-cream shadow-card hover:bg-forest-500 hover:shadow-luxe hover:-translate-y-0.5;
+  }
+
+  .btn-gold {
+    @apply btn bg-gold-sheen bg-[length:200%_auto] text-forest-700 shadow-gold hover:-translate-y-0.5 hover:bg-right;
+  }
+
+  .btn-ghost {
+    @apply btn border border-forest/20 bg-transparent text-forest hover:border-forest/40 hover:bg-forest/5;
+  }
+
+  .btn-white {
+    @apply btn bg-cream text-forest shadow-card hover:-translate-y-0.5 hover:bg-cream-100;
+  }
+
+  .card-luxe {
+    @apply rounded-3xl border border-forest/10 bg-cream-100 shadow-card;
+  }
+
+  .glass {
+    @apply border border-white/20 bg-white/10 backdrop-blur-xl;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
